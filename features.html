@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore Creator Analytics features: Connect TikTok OAuth, Supabase sync, Dashboard, Insight Engine, Content Ideas, Profile, and Demo Mode." />
+  <meta name="theme-color" content="#0F1419" />
+  <meta property="og:title" content="Creator Analytics Features" />
+  <meta property="og:description" content="Product-led overview of Dashboard, Insights, Content Ideas, Profile, secure OAuth, and Demo Mode." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://creatoranalytics.example/features.html" />
+  <title>Creator Analytics | Features</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Creator Analytics Features","url":"https://creatoranalytics.example/features.html"}</script>
+  <style>
+    :root{--bg:#0F1419;--bg2:#141B22;--panel:#171F28;--panel2:#1E2834;--text:#E8E8E8;--muted:#AAB4C0;--line:rgba(255,255,255,.08);--primary:#667eea;--primary2:#764ba2;--accent:#FF6B6B;--ok:#4ade80;--shadow:0 18px 50px rgba(0,0,0,.28);--r-sm:8px;--r-lg:16px;--max:1180px;--trans:220ms ease;}
+    [data-theme="light"]{--bg:#F5F7FB;--bg2:#FFFFFF;--panel:#FFFFFF;--panel2:#F0F4FA;--text:#101828;--muted:#475467;--line:rgba(16,24,40,.1);--shadow:0 18px 50px rgba(16,24,40,.08);}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,rgba(102,126,234,.12),transparent 30%),radial-gradient(circle at top right,rgba(255,107,107,.08),transparent 22%),var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility} img,svg{max-width:100%;display:block} a{color:inherit;text-decoration:none} button,input,textarea{font:inherit} :focus-visible{outline:3px solid rgba(102,126,234,.65);outline-offset:3px} .skip{position:absolute;left:-999px;top:0;background:var(--panel);padding:12px 16px;border-radius:999px;z-index:1000}.skip:focus{left:16px;top:16px}
+    .wrap{width:min(100% - 32px,var(--max));margin:0 auto} .section{padding:72px 0} .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}.eyebrow::before{content:"";width:24px;height:1px;background:linear-gradient(90deg,var(--accent),transparent)} h1,h2,h3,h4,p{margin:0} h1{font-size:clamp(2.5rem,7vw,4.4rem);line-height:1.03;letter-spacing:-.04em} h2{font-size:clamp(1.7rem,3vw,2.6rem);line-height:1.08;letter-spacing:-.03em} h3{font-size:1.12rem;line-height:1.2} p.lead{font-size:clamp(1.05rem,2vw,1.18rem);color:var(--muted);max-width:66ch}
+    .panel,.feature-detail,.integration,.cta{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01)),var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)} .panel,.feature-detail,.integration{padding:22px}
+    .btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:14px 22px;border-radius:999px;border:1px solid transparent;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;font-weight:700;transition:transform var(--trans),filter var(--trans),box-shadow var(--trans)} .btn:hover{transform:translateY(-1px);filter:brightness(1.04);box-shadow:0 12px 24px rgba(102,126,234,.28)} .btn.secondary{background:transparent;border-color:var(--line);color:var(--text)} .btn.ghost{background:transparent;border-color:transparent;color:var(--text)}
+    .topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)} .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0} .brand{display:inline-flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.03em}.brand-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--primary2));display:grid;place-items:center;color:#fff;box-shadow:0 8px 24px rgba(102,126,234,.24)} .menu{display:none;gap:8px;align-items:center}.menu a{padding:10px 12px;color:var(--muted);border-radius:999px}.menu a:hover,.menu a[aria-current="page"]{background:rgba(255,255,255,.05);color:var(--text)} .nav-actions{display:flex;align-items:center;gap:10px} .icon-btn{min-height:48px;min-width:48px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--text);display:grid;place-items:center;cursor:pointer;transition:transform var(--trans),background var(--trans)} .icon-btn:hover{transform:translateY(-1px);background:var(--panel2)} .burger{display:grid;gap:4px} .burger span{width:18px;height:2px;background:currentColor;border-radius:99px}
+    .mobile-panel{display:none;padding:0 0 18px} .mobile-panel.open{display:block} .mobile-links{display:grid;gap:8px;padding:12px 0 0} .mobile-links a{padding:14px 16px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--panel)}
+    .hero{padding:56px 0 24px} .hero-grid{display:grid;gap:28px;align-items:center}
+    .grid{display:grid;gap:24px} .detail-grid{display:grid;gap:18px}
+    .feature-detail{display:grid;gap:18px;align-items:center} .feature-detail .copy{display:grid;gap:14px} .bullet-list{margin:0;padding-left:18px;display:grid;gap:8px;color:var(--muted)} .visual{min-height:240px;border-radius:24px;border:1px solid rgba(255,255,255,.08);background:linear-gradient(135deg,rgba(102,126,234,.24),rgba(255,107,107,.12)),radial-gradient(circle at 30% 30%,rgba(255,255,255,.16),transparent 26%),var(--panel2);display:grid;place-items:center;position:relative;overflow:hidden} .visual::before{content:"";position:absolute;inset:18px;border-radius:20px;border:1px dashed rgba(255,255,255,.14)} .visual svg{width:min(78%,280px);opacity:.94}
+    .feature-tag{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--line);color:var(--muted);font-size:.92rem} .feature-link{font-weight:700;color:#c7d3ff}
+    .integration-grid{display:grid;gap:14px;grid-template-columns:repeat(2,1fr)} .integration{display:flex;align-items:center;justify-content:center;min-height:84px;font-weight:800;letter-spacing:-.02em;background:var(--panel)}
+    .cta{padding:28px;display:grid;gap:18px;align-items:center;background:linear-gradient(135deg,rgba(102,126,234,.22),rgba(118,75,162,.18)),var(--panel)} .footer{padding:36px 0 48px;border-top:1px solid var(--line);margin-top:60px} .footer-grid{display:grid;gap:24px} .social{display:flex;gap:10px;flex-wrap:wrap} .social a{width:44px;height:44px;border-radius:999px;border:1px solid var(--line);display:grid;place-items:center;background:var(--panel)} .newsletter{display:grid;gap:10px} .field{display:flex;gap:10px;flex-wrap:wrap} input[type="email"],input[type="search"],input[type="text"],select,textarea{width:100%;min-height:48px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--bg2);color:var(--text)} .helper{font-size:.92rem;color:var(--muted)} .lazy-load{opacity:.001;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease} .lazy-load.is-visible{opacity:1;transform:translateY(0)}
+    @media (min-width:768px){.menu{display:flex}.burger-wrap{display:none}.hero{padding:74px 0 40px}.detail-grid{grid-template-columns:repeat(2,1fr)} .feature-detail{grid-template-columns:1fr 1fr} .feature-detail.reverse .visual{order:2} .feature-detail.reverse .copy{order:1} .integration-grid{grid-template-columns:repeat(4,1fr)} .cta{grid-template-columns:1.15fr .85fr} .footer-grid{grid-template-columns:1.2fr .8fr .8fr}}
+    @media (min-width:1024px){.section{padding:92px 0}.integration-grid{grid-template-columns:repeat(6,1fr)} .cta{padding:36px}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="nav" role="navigation" aria-label="Primary navigation">
+        <a class="brand" href="index.html"><span class="brand-mark">V</span><span>Creator Analytics</span></a>
+        <nav class="menu" aria-label="Main menu"><a href="features.html" aria-current="page">Features</a><a href="pricing.html">Pricing</a><a href="blog.html">Blog</a><a href="terms.html">Docs</a></nav>
+        <div class="nav-actions"><button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">☾</button><a class="btn secondary" href="pricing.html">Connect TikTok</a><div class="burger-wrap"><button class="icon-btn burger" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button></div></div>
+      </div>
+      <div class="mobile-panel" id="mobileMenu"><div class="mobile-links"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="blog.html">Blog</a><a href="terms.html">Docs</a><a href="pricing.html">Connect TikTok</a></div></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy lazy-load">
+          <span class="eyebrow">Product features</span>
+          <h1>Features built for the creator loop.</h1>
+          <p class="lead">Connect, analyze, decide, publish, repeat. Every section is designed for practical TikTok decisions, not vanity reporting.</p>
+          <div class="field"><a class="btn" href="#details">Explore details</a><a class="btn secondary" href="pricing.html">Connect TikTok</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Detail Grid -->
+    <section class="section" id="details">
+      <div class="wrap detail-grid">
+        <article class="feature-detail lazy-load">
+          <div class="visual" aria-hidden="true"><svg viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="32" y="28" width="356" height="224" rx="22" fill="rgba(15,20,25,.65)" stroke="rgba(255,255,255,.16)"/><rect x="56" y="56" width="96" height="20" rx="10" fill="#667eea"/><rect x="56" y="92" width="122" height="14" rx="7" fill="rgba(255,255,255,.22)"/><rect x="56" y="130" width="300" height="18" rx="9" fill="#FF6B6B" fill-opacity=".72"/><rect x="56" y="166" width="214" height="18" rx="9" fill="#764ba2" fill-opacity=".8"/><rect x="56" y="202" width="252" height="18" rx="9" fill="#4ade80" fill-opacity=".72"/></svg></div>
+          <div class="copy"><span class="feature-tag">Dashboard</span><h2>Creator-friendly dashboard</h2><p class="lead">Track posts count, avg views, avg engagement, and consistency score in one place.</p><ul class="bullet-list"><li>Mobile-first overview</li><li>Refresh metrics action</li><li>Fast daily scan</li></ul><a class="feature-link" href="pricing.html">Connect TikTok to unlock full dashboard →</a></div>
+        </article>
+        <article class="feature-detail reverse lazy-load">
+          <div class="visual" aria-hidden="true"><svg viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="114" cy="92" r="38" fill="#FF6B6B" fill-opacity=".6"/><circle cx="208" cy="126" r="54" fill="#667eea" fill-opacity=".5"/><circle cx="300" cy="88" r="30" fill="#4ade80" fill-opacity=".45"/><path d="M78 200C126 152 168 224 216 176C256 136 302 150 352 108" stroke="rgba(255,255,255,.76)" stroke-width="10" stroke-linecap="round"/></svg></div>
+          <div class="copy"><span class="feature-tag">Insights</span><h2>Insight Engine</h2><p class="lead">Get ranked growth insights sorted by score with concrete recommendations and expected impact.</p><ul class="bullet-list"><li>Priority-based list</li><li>Action recommendation per insight</li><li>Expected impact context</li></ul><a class="feature-link" href="blog.html">See insight workflows →</a></div>
+        </article>
+        <article class="feature-detail lazy-load">
+          <div class="visual" aria-hidden="true"><svg viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="58" y="54" width="304" height="172" rx="18" fill="rgba(255,255,255,.06)"/><rect x="92" y="88" width="236" height="16" rx="8" fill="#667eea" fill-opacity=".72"/><rect x="92" y="122" width="188" height="16" rx="8" fill="#FF6B6B" fill-opacity=".7"/><rect x="92" y="156" width="212" height="16" rx="8" fill="#4ade80" fill-opacity=".72"/><rect x="92" y="190" width="154" height="16" rx="8" fill="#764ba2" fill-opacity=".72"/></svg></div>
+          <div class="copy"><span class="feature-tag">Content Ideas</span><h2>Ideas generated from strongest signals</h2><p class="lead">Turn your top insights into practical content ideas you can execute in the next publishing cycle.</p><ul class="bullet-list"><li>Derived from high-score insights</li><li>Designed for quick execution</li><li>Supports repeatable workflows</li></ul><a class="feature-link" href="blog.html">Read idea generation guides →</a></div>
+        </article>
+        <article class="feature-detail reverse lazy-load">
+          <div class="visual" aria-hidden="true"><svg viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M98 208V152M138 208V116M178 208V88M218 208V132M258 208V98M298 208V72" stroke="rgba(255,255,255,.7)" stroke-width="18" stroke-linecap="round"/><path d="M90 216h240" stroke="#4ade80" stroke-width="10" stroke-linecap="round"/></svg></div>
+          <div class="copy"><span class="feature-tag">Profile</span><h2>Connection and account status</h2><p class="lead">Use Profile to review TikTok connection status, account identity, and sign out controls.</p><ul class="bullet-list"><li>Connection visibility</li><li>Account state clarity</li><li>Safe sign-out flow</li></ul><a class="feature-link" href="terms.html">Review account terms →</a></div>
+        </article>
+        <article class="feature-detail lazy-load">
+          <div class="visual" aria-hidden="true"><svg viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="70" y="72" width="88" height="88" rx="28" fill="#667eea" fill-opacity=".52"/><rect x="170" y="72" width="88" height="88" rx="28" fill="#FF6B6B" fill-opacity=".45"/><rect x="270" y="72" width="88" height="88" rx="28" fill="#4ade80" fill-opacity=".42"/><path d="M92 196h236" stroke="rgba(255,255,255,.66)" stroke-width="12" stroke-linecap="round"/></svg></div>
+          <div class="copy"><span class="feature-tag">Secure OAuth</span><h2>Connect TikTok with secure OAuth</h2><p class="lead">Creator Analytics follows app to browser OAuth, Supabase callback bridge, and deep-link return to app.</p><ul class="bullet-list"><li>Secure authentication path</li><li>Reliable connection status handling</li><li>Built for mobile onboarding</li></ul><a class="feature-link" href="pricing.html">Start with Connect TikTok →</a></div>
+        </article>
+        <article class="feature-detail reverse lazy-load">
+          <div class="visual" aria-hidden="true"><svg viewBox="0 0 420 280" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="210" cy="140" r="86" fill="rgba(102,126,234,.26)"/><circle cx="210" cy="140" r="46" fill="rgba(255,107,107,.34)"/><path d="M168 140h84" stroke="#fff" stroke-width="12" stroke-linecap="round"/></svg></div>
+          <div class="copy"><span class="feature-tag">Demo Mode</span><h2>Use Demo Mode instantly</h2><p class="lead">Preview the core product experience without connecting an account first.</p><ul class="bullet-list"><li>Fast product preview</li><li>No OAuth needed to start</li><li>Useful for first-time onboarding</li></ul><a class="feature-link" href="pricing.html">Open Demo Mode options →</a></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Integrations -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head"><div><div class="eyebrow">Integrations</div><h2>Powered by TikTok + Supabase.</h2></div></div>
+        <div class="integration-grid">
+          <div class="integration lazy-load">TikTok OAuth</div>
+          <div class="integration lazy-load">Supabase DB</div>
+          <div class="integration lazy-load">Edge Functions</div>
+          <div class="integration lazy-load">Deep Link Return</div>
+          <div class="integration lazy-load">React Navigation</div>
+          <div class="integration lazy-load">Zustand State</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="wrap">
+        <div class="cta lazy-load">
+          <div><div class="eyebrow">See it in action</div><h2>Pick your path: Connect TikTok or use Demo Mode.</h2><p class="lead">Both options lead to the same product goal: practical next actions from real creator signals.</p></div>
+          <div class="field"><a class="btn" href="pricing.html">Connect TikTok</a><a class="btn secondary" href="pricing.html">Use Demo Mode</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="newsletter" id="newsletter">
+        <a class="brand" href="index.html"><span class="brand-mark">V</span><span>Creator Analytics</span></a>
+        <p class="helper">From TikTok posts to clear next actions.</p>
+        <form id="newsletterForm" class="newsletter" novalidate>
+          <label class="helper" for="newsletterEmail">Product updates for creator analytics workflows</label>
+          <div class="field"><input id="newsletterEmail" name="email" type="email" autocomplete="email" placeholder="Email address" required /><button class="btn" type="submit">Subscribe</button></div>
+          <p class="helper" id="newsletterMessage" aria-live="polite"></p>
+        </form>
+      </div>
+      <div><h3>Links</h3><p><a href="features.html">Features</a></p><p><a href="pricing.html">Pricing</a></p><p><a href="blog.html">Blog</a></p><p><a href="terms.html">Terms</a></p></div>
+      <div><h3>Social</h3><div class="social"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="X">x</a><a href="#" aria-label="GitHub">⌘</a></div></div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const root=document.documentElement; const themeToggle=document.getElementById('themeToggle'); const menuToggle=document.getElementById('menuToggle'); const mobileMenu=document.getElementById('mobileMenu');
+      const savedTheme=localStorage.getItem('creator-analytics-theme'); if(savedTheme){root.setAttribute('data-theme',savedTheme);themeToggle.textContent=savedTheme==='light'?'☼':'☾';}
+      themeToggle?.addEventListener('click',()=>{const next=root.getAttribute('data-theme')==='light'?'dark':'light';root.setAttribute('data-theme',next);localStorage.setItem('creator-analytics-theme',next);themeToggle.textContent=next==='light'?'☼':'☾';});
+      menuToggle?.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));});
+      document.querySelectorAll('a[href^="#"]').forEach(link=>{link.addEventListener('click',event=>{const target=document.querySelector(link.getAttribute('href'));if(!target) return;event.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});mobileMenu?.classList.remove('open');menuToggle?.setAttribute('aria-expanded','false');});});
+      const newsletter=document.getElementById('newsletterForm'); const email=document.getElementById('newsletterEmail'); const message=document.getElementById('newsletterMessage'); newsletter?.addEventListener('submit',event=>{event.preventDefault();const value=email.value.trim();const valid=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);message.textContent=valid?'Thanks. You are subscribed to Creator Analytics updates.':'Please enter a valid email address.';message.style.color=valid?'var(--ok)':'var(--accent)';if(valid) newsletter.reset();});
+      const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:.12}); document.querySelectorAll('.lazy-load').forEach(el=>observer.observe(el));
+    })();
+  </script>
+</body>
+</html>

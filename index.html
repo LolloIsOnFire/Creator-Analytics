@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Creator Analytics helps TikTok creators connect accounts, sync metrics to Supabase, and get prioritized actions with the Insight Engine." />
+  <meta name="theme-color" content="#0F1419" />
+  <meta property="og:title" content="Creator Analytics - From TikTok posts to clear next actions" />
+  <meta property="og:description" content="Connect TikTok via OAuth, sync to Supabase, get ranked growth insights and practical content ideas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://creatoranalytics.example/" />
+  <meta property="og:image" content="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%230F1419'/%3E%3Crect x='120' y='105' width='960' height='420' rx='40' fill='url(%23g)'/%3E%3Ccircle cx='330' cy='250' r='92' fill='%23FF6B6B' fill-opacity='.16'/%3E%3Ccircle cx='880' cy='185' r='68' fill='%23667eea' fill-opacity='.25'/%3E%3Cpath d='M280 390h640' stroke='white' stroke-opacity='.18' stroke-width='10' stroke-linecap='round'/%3E%3Ctext x='150' y='210' fill='white' font-family='Arial' font-size='64' font-weight='700'%3ECreator Analytics%3C/text%3E%3Ctext x='150' y='285' fill='%23E8E8E8' font-family='Arial' font-size='31'%3EReal-time insights at the speed of your business%3C/text%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%23667eea'/%3E%3Cstop offset='1' stop-color='%23764ba2'/%3E%3C/linearGradient%3E%3C/defs%3E%3C/svg%3E" />
+  <link rel="canonical" href="https://creatoranalytics.example/" />
+  <title>Creator Analytics | From TikTok posts to clear next actions</title>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"Creator Analytics",
+    "url":"https://creatoranalytics.example/",
+    "logo":"https://creatoranalytics.example/logo.svg",
+    "sameAs":["https://www.linkedin.com","https://x.com","https://github.com"]
+  }
+  </script>
+  <style>
+    :root{--bg:#0F1419;--bg2:#141B22;--panel:#171F28;--panel2:#1E2834;--text:#E8E8E8;--muted:#AAB4C0;--line:rgba(255,255,255,.08);--primary:#667eea;--primary2:#764ba2;--accent:#FF6B6B;--ok:#4ade80;--shadow:0 18px 50px rgba(0,0,0,.28);--r-sm:8px;--r-lg:16px;--s1:8px;--s2:16px;--s3:24px;--s4:32px;--s5:40px;--s6:48px;--max:1180px;--trans:220ms ease;}
+    [data-theme="light"]{--bg:#F5F7FB;--bg2:#FFFFFF;--panel:#FFFFFF;--panel2:#F0F4FA;--text:#101828;--muted:#475467;--line:rgba(16,24,40,.1);--shadow:0 18px 50px rgba(16,24,40,.08);}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,rgba(102,126,234,.12),transparent 30%),radial-gradient(circle at top right,rgba(255,107,107,.08),transparent 22%),var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility} img,svg{max-width:100%;display:block} a{color:inherit;text-decoration:none} button,input,textarea{font:inherit} :focus-visible{outline:3px solid rgba(102,126,234,.65);outline-offset:3px} .skip{position:absolute;left:-999px;top:0;background:var(--panel);padding:12px 16px;border-radius:999px;z-index:1000}.skip:focus{left:16px;top:16px}
+    .wrap{width:min(100% - 32px,var(--max));margin:0 auto} .section{padding:72px 0} .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}.eyebrow::before{content:"";width:24px;height:1px;background:linear-gradient(90deg,var(--accent),transparent)} h1,h2,h3,h4,p{margin:0} h1{font-size:clamp(2.5rem,7vw,4.9rem);line-height:1.03;letter-spacing:-.04em} h2{font-size:clamp(1.7rem,3vw,2.8rem);line-height:1.08;letter-spacing:-.03em} h3{font-size:1.12rem;line-height:1.2} p.lead{font-size:clamp(1.05rem,2vw,1.25rem);color:var(--muted);max-width:66ch}
+    .card,.panel,.feature,.price,.testimonial,.faq-item,.metric,.article,.toc,.sidebar,.table-wrap{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01)),var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)} .panel{padding:24px} .grid{display:grid;gap:24px}
+    .btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:14px 22px;border-radius:999px;border:1px solid transparent;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;font-weight:700;letter-spacing:-.01em;transition:transform var(--trans),filter var(--trans),box-shadow var(--trans)} .btn:hover{transform:translateY(-1px);filter:brightness(1.04);box-shadow:0 12px 24px rgba(102,126,234,.28)} .btn::after{content:"";position:absolute;inset:auto;left:50%;top:50%;width:0;height:0;border-radius:999px;background:rgba(255,255,255,.22);transform:translate(-50%,-50%);transition:width .45s ease,height .45s ease;pointer-events:none} .btn:hover::after{width:280px;height:280px} .btn.secondary{background:transparent;border-color:var(--line);color:var(--text)} .btn.ghost{background:transparent;border-color:transparent;color:var(--text)}
+    .topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)} .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0} .brand{display:inline-flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.03em}.brand-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--primary2));display:grid;place-items:center;color:#fff;box-shadow:0 8px 24px rgba(102,126,234,.24)} .menu{display:none;gap:8px;align-items:center}.menu a{padding:10px 12px;color:var(--muted);border-radius:999px}.menu a:hover,.menu a[aria-current="page"]{background:rgba(255,255,255,.05);color:var(--text)} .nav-actions{display:flex;align-items:center;gap:10px} .icon-btn{min-height:48px;min-width:48px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--text);display:grid;place-items:center;cursor:pointer;transition:transform var(--trans),background var(--trans)} .icon-btn:hover{transform:translateY(-1px);background:var(--panel2)} .burger{display:grid;gap:4px} .burger span{width:18px;height:2px;background:currentColor;border-radius:99px}
+    .mobile-panel{display:none;padding:0 0 18px} .mobile-panel.open{display:block} .mobile-links{display:grid;gap:8px;padding:12px 0 0} .mobile-links a{padding:14px 16px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--panel)}
+    .hero{padding:56px 0 24px} .hero-grid{display:grid;gap:28px;align-items:center} .hero-copy{display:grid;gap:22px} .hero-badges{display:flex;flex-wrap:wrap;gap:10px} .badge{padding:9px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--muted);font-size:.92rem} .hero-card{padding:0;overflow:hidden;background:linear-gradient(160deg,rgba(102,126,234,.22),rgba(118,75,162,.12)),var(--panel)} .hero-visual{position:relative;min-height:380px;display:grid;place-items:center;padding:24px} .orb{position:absolute;border-radius:50%;filter:blur(2px)} .orb.one{width:240px;height:240px;left:-40px;top:-20px;background:radial-gradient(circle,rgba(255,107,107,.35),transparent 65%)} .orb.two{width:180px;height:180px;right:0;top:20px;background:radial-gradient(circle,rgba(102,126,234,.45),transparent 68%)} .dashboard{position:relative;width:min(100%,480px);background:rgba(10,14,20,.52);border:1px solid rgba(255,255,255,.1);backdrop-filter:blur(16px);border-radius:24px;padding:18px;box-shadow:0 30px 70px rgba(0,0,0,.32)} [data-theme="light"] .dashboard{background:rgba(255,255,255,.72)} .dash-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;font-size:.92rem;color:var(--muted)} .dash-chart{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;align-items:end;height:190px} .bar{border-radius:14px 14px 4px 4px;background:linear-gradient(180deg,var(--accent),var(--primary));min-height:24px} .bar:nth-child(1){height:42%}.bar:nth-child(2){height:64%}.bar:nth-child(3){height:38%}.bar:nth-child(4){height:78%}.bar:nth-child(5){height:92%}.bar:nth-child(6){height:70%}.mini-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:14px}.mini{padding:12px;border-radius:16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)} .mini strong{display:block;font-size:1.05rem}.mini span{font-size:.88rem;color:var(--muted)}
+    .pill{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;border-radius:999px;background:rgba(255,107,107,.12);color:#ffb4b4;font-size:.88rem;font-weight:700}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:22px;flex-wrap:wrap}
+    .problem-grid,.feature-grid,.pricing-grid,.proof-grid,.stats-grid,.footer-grid{display:grid;gap:16px} .problem-item,.feature,.price,.testimonial,.metric,.article,.faq-item{padding:22px} .icon{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(102,126,234,.18),rgba(255,107,107,.12));font-size:1.2rem;margin-bottom:14px} .feature-grid{grid-template-columns:1fr}.feature p,.problem-item p,.testimonial p,.metric p,.price li,.article p,.faq-item p,.legal-body p,.legal-body li{color:var(--muted)} .feature{display:grid;gap:12px;min-height:100%}.feature ul,.price ul,.legal-body ul,.check-list{margin:0;padding:0 0 0 18px;display:grid;gap:8px}.timeline{display:grid;gap:12px}.step{display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:start;padding:18px;border:1px solid var(--line);border-radius:var(--r-lg);background:rgba(255,255,255,.02)} .step-num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff}
+    .pricing-grid{grid-template-columns:1fr}.price{display:grid;gap:16px}.price .amount{font-size:2.3rem;font-weight:800;letter-spacing:-.04em}.price .per{color:var(--muted)} .price.featured{border-color:rgba(102,126,234,.35);transform:translateY(-4px)} .rating{color:#ffd166;font-size:.95rem}
+    .proof-grid{grid-template-columns:1fr}.testimonial-top{display:flex;gap:12px;align-items:center;margin-bottom:12px}.avatar{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--primary2));display:grid;place-items:center;font-weight:800;color:#fff} .stats-grid{grid-template-columns:repeat(2,1fr)} .metric{display:grid;gap:8px;text-align:left} .metric strong{font-size:clamp(1.8rem,4vw,3rem);line-height:1;letter-spacing:-.04em}
+    .faq-list{display:grid;gap:12px}.faq-item{padding:0;overflow:hidden}.faq-question{width:100%;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:transparent;border:0;color:var(--text);text-align:left;cursor:pointer;min-height:48px}.faq-answer{padding:0 22px 20px;display:none}.faq-item.open .faq-answer{display:block}.faq-item.open .chev{transform:rotate(180deg)} .chev{transition:transform var(--trans)}
+    .cta{background:linear-gradient(135deg,rgba(102,126,234,.22),rgba(118,75,162,.18)),var(--panel);border:1px solid var(--line);border-radius:calc(var(--r-lg) + 8px);padding:28px;display:grid;gap:18px;align-items:center} .footer{padding:36px 0 48px;border-top:1px solid var(--line);margin-top:60px;background:linear-gradient(180deg,transparent,rgba(255,255,255,.02))} .footer-grid{grid-template-columns:1fr} .footer a{color:var(--muted)} .footer a:hover{color:var(--text)} .social{display:flex;gap:10px;flex-wrap:wrap} .social a{width:44px;height:44px;border-radius:999px;border:1px solid var(--line);display:grid;place-items:center;background:var(--panel)} .newsletter{display:grid;gap:10px} .field{display:flex;gap:10px;flex-wrap:wrap} input[type="email"],input[type="search"],input[type="text"],select,textarea{width:100%;min-height:48px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--bg2);color:var(--text)} textarea{min-height:120px;resize:vertical} .helper{font-size:.92rem;color:var(--muted)} .pill-toggle{display:inline-flex;align-items:center;gap:8px;padding:8px;border-radius:999px;background:var(--panel);border:1px solid var(--line)} .pill-toggle button{border:0;background:transparent;color:var(--muted);padding:10px 14px;border-radius:999px;cursor:pointer} .pill-toggle button.active{background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff} .price .save{color:#ffb4b4;font-weight:700} .table-wrap{overflow:auto} table{width:100%;border-collapse:collapse;min-width:720px} th,td{padding:16px 14px;border-bottom:1px solid var(--line);text-align:left} th{font-size:.92rem;color:var(--muted);white-space:nowrap} .check{color:var(--ok);font-weight:800} .blog-layout{display:grid;gap:24px} .article-grid{display:grid;gap:18px;grid-template-columns:1fr} .article .thumb{height:180px;border-radius:18px;background:linear-gradient(135deg,rgba(102,126,234,.28),rgba(255,107,107,.16)),radial-gradient(circle at 30% 30%,rgba(255,255,255,.22),transparent 26%),var(--panel2);margin-bottom:16px;position:relative;overflow:hidden} .article .thumb::after{content:"";position:absolute;inset:auto 18px 18px auto;width:96px;height:96px;border-radius:24px;background:rgba(255,255,255,.08);transform:rotate(14deg)} .meta{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:.92rem;margin:10px 0 12px} .sidebar{padding:22px;display:grid;gap:22px}.tag-list{display:flex;flex-wrap:wrap;gap:10px}.tag{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--line);cursor:pointer} .hidden{display:none !important} .toc{padding:18px} .toc a{display:block;padding:8px 0;color:var(--muted)} .toc a:hover{color:var(--text)} .legal-body{display:grid;gap:18px} .legal-body h2{margin-top:8px} .legal-body h3{margin-top:14px}
+    .lazy-load{opacity:.001;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease} .lazy-load.is-visible{opacity:1;transform:translateY(0)}
+    @media (min-width:768px){.menu{display:flex}.burger-wrap{display:none}.hero{padding:74px 0 40px}.hero-grid{grid-template-columns:1.1fr .9fr}.problem-grid,.pricing-grid,.proof-grid{grid-template-columns:repeat(3,1fr)} .feature-grid{grid-template-columns:repeat(2,1fr)} .stats-grid{grid-template-columns:repeat(4,1fr)} .footer-grid{grid-template-columns:1.2fr .8fr .8fr}.cta{grid-template-columns:1.15fr .85fr}.article-grid{grid-template-columns:repeat(2,1fr)}.blog-layout{grid-template-columns:1.6fr .8fr}}
+    @media (min-width:1024px){.section{padding:92px 0}.feature-grid{grid-template-columns:repeat(3,1fr)} .blog-layout{grid-template-columns:1.9fr .75fr} .article-grid{grid-template-columns:repeat(3,1fr)} .pricing-grid{grid-template-columns:repeat(3,1fr)} .sidebar{position:sticky;top:94px;align-self:start}.cta{padding:36px}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="nav" role="navigation" aria-label="Primary navigation">
+        <a class="brand" href="index.html" aria-label="Creator Analytics home">
+          <span class="brand-mark" aria-hidden="true">V</span>
+          <span>Creator Analytics</span>
+        </a>
+        <nav class="menu" aria-label="Main menu">
+          <a href="features.html">Features</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="terms.html">Docs</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">☾</button>
+          <a class="btn secondary" href="#pricing">Connect TikTok</a>
+          <div class="burger-wrap">
+            <button class="icon-btn burger" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+          </div>
+        </div>
+      </div>
+      <div class="mobile-panel" id="mobileMenu">
+        <div class="mobile-links">
+          <a href="features.html">Features</a>
+          <a href="pricing.html">Pricing</a>
+          <a href="blog.html">Blog</a>
+          <a href="terms.html">Docs</a>
+          <a href="#pricing">Connect TikTok</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy lazy-load">
+          <span class="pill">From TikTok posts to clear next actions</span>
+          <h1>Understand what worked. Decide what to publish next.</h1>
+          <p class="lead">Creator Analytics helps you connect TikTok via secure OAuth, sync video metrics to Supabase, and get ranked recommendations from the Insight Engine.</p>
+          <div class="hero-badges" aria-label="Key benefits">
+            <span class="badge">Connect TikTok</span>
+            <span class="badge">Use Demo Mode</span>
+            <span class="badge">Refresh metrics</span>
+          </div>
+          <div class="field">
+            <a class="btn" href="pricing.html">Connect TikTok</a>
+            <a class="btn secondary" href="pricing.html">Use Demo Mode</a>
+          </div>
+        </div>
+        <div class="hero-card panel lazy-load" aria-label="Product dashboard preview">
+          <div class="hero-visual">
+            <span class="orb one" aria-hidden="true"></span>
+            <span class="orb two" aria-hidden="true"></span>
+            <div class="dashboard">
+              <div class="dash-head"><strong>Creator Analytics Live</strong><span>Insight Engine ranked view</span></div>
+              <div class="dash-chart" aria-hidden="true">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+              </div>
+              <div class="mini-grid">
+                <div class="mini"><strong>Posts count</strong><span>Last 30 days</span></div>
+                <div class="mini"><strong>Avg views</strong><span>Synced from TikTok</span></div>
+                <div class="mini"><strong>Avg engagement</strong><span>Per recent posts</span></div>
+                <div class="mini"><strong>Consistency score</strong><span>Updated in app</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Value Proposition -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Value Proposition</div>
+            <h2>Not just metrics. Prioritized actions you can apply this week.</h2>
+          </div>
+        </div>
+        <div class="problem-grid">
+          <article class="problem-item lazy-load"><div class="icon">🧠</div><h3>Insight Engine ranking</h3><p>Insights are ordered by score so you can see what matters now and what can wait.</p></article>
+          <article class="problem-item lazy-load"><div class="icon">🎯</div><h3>Action recommendation</h3><p>Each insight includes a practical recommendation and expected impact for faster decisions.</p></article>
+          <article class="problem-item lazy-load"><div class="icon">💡</div><h3>Content ideas from signals</h3><p>Turn top-performing patterns into concrete content ideas instead of guessing what to post.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who Is This For -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Who Is This For</div>
+            <h2>Built for TikTok creators and creator-first growth teams.</h2>
+          </div>
+        </div>
+        <div class="problem-grid">
+          <article class="problem-item lazy-load"><div class="icon">📱</div><h3>Solo creators</h3><p>Understand what worked and plan your next posts without technical setup overhead.</p></article>
+          <article class="problem-item lazy-load"><div class="icon">👥</div><h3>Small creator teams</h3><p>Use one shared view for Dashboard, Insights, and Content Ideas.</p></article>
+          <article class="problem-item lazy-load"><div class="icon">📈</div><h3>Growth operators</h3><p>Prioritize content decisions using consistent metrics and scored recommendations.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- First 10 Minutes -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">First 10 Minutes</div>
+            <h2>Get useful output fast, even before full onboarding.</h2>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="step lazy-load"><div class="step-num">1</div><div><h3>Tap Connect TikTok or Use Demo Mode</h3><p>Start with secure OAuth or preview the app instantly in Demo Mode.</p></div></div>
+          <div class="step lazy-load"><div class="step-num">2</div><div><h3>Sync latest videos into Supabase</h3><p>Your latest posts and core metrics are prepared for analytics features.</p></div></div>
+          <div class="step lazy-load"><div class="step-num">3</div><div><h3>Open Dashboard and Refresh metrics</h3><p>Check posts count, avg views, avg engagement, and consistency score.</p></div></div>
+          <div class="step lazy-load"><div class="step-num">4</div><div><h3>Read top insights and generate ideas</h3><p>Use Insight Engine recommendations to plan practical next content actions.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Features -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Core Features</div>
+            <h2>One creator workflow from connection to next content idea.</h2>
+          </div>
+          <a class="btn ghost" href="features.html">See all features →</a>
+        </div>
+        <div class="feature-grid">
+          <article class="feature lazy-load"><div class="icon">📊</div><h3>Dashboard</h3><p>Track posts count, avg views, avg engagement, and consistency score with one Refresh metrics action.</p></article>
+          <article class="feature lazy-load"><div class="icon">🧠</div><h3>Insights</h3><p>Insight Engine ranks opportunities by score and explains expected impact.</p></article>
+          <article class="feature lazy-load"><div class="icon">💡</div><h3>Content Ideas</h3><p>Generate practical ideas from your strongest signals and recent performance.</p></article>
+          <article class="feature lazy-load"><div class="icon">👤</div><h3>Profile</h3><p>Check TikTok connection status, account details, and sign out controls in one place.</p></article>
+          <article class="feature lazy-load"><div class="icon">🔐</div><h3>Secure OAuth</h3><p>Connect TikTok via app-to-browser OAuth, Supabase callback bridge, and deep-link return.</p></article>
+          <article class="feature lazy-load"><div class="icon">⚡</div><h3>Demo Mode</h3><p>Preview core product value instantly without connecting an account.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">How It Works</div>
+            <h2>A practical four-step flow from TikTok data to next actions.</h2>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="step lazy-load"><div class="step-num">1</div><div><h3>Connect TikTok</h3><p>Authenticate through secure OAuth from the app to TikTok and back to the app flow.</p></div></div>
+          <div class="step lazy-load"><div class="step-num">2</div><div><h3>Sync metrics into Supabase</h3><p>Latest videos and core performance metrics are synced for product analysis.</p></div></div>
+          <div class="step lazy-load"><div class="step-num">3</div><div><h3>Read ranked insights</h3><p>Insight Engine sorts opportunities by score with recommendation and expected impact.</p></div></div>
+          <div class="step lazy-load"><div class="step-num">4</div><div><h3>Generate content ideas</h3><p>Use top signals to create practical ideas for your next publishing cycle.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Overview -->
+    <section class="section" id="pricing">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Pricing Overview</div>
+            <h2>Start in Demo Mode, then choose the workflow depth you need.</h2>
+          </div>
+          <a class="btn ghost" href="pricing.html">Full pricing comparison →</a>
+        </div>
+        <div class="pricing-grid">
+          <article class="price lazy-load"><h3>Demo Mode</h3><div class="amount">Free</div><div class="per">Instant preview</div><p>Try the product flow without connecting a TikTok account.</p><ul><li>No OAuth required</li><li>Preview Dashboard and Insights</li><li>Fast onboarding path</li></ul><a class="btn secondary" href="pricing.html">Use Demo Mode</a></article>
+          <article class="price featured lazy-load"><span class="pill">Creator plan</span><h3>Creator</h3><div class="amount">Connected</div><div class="per">For active creators</div><p>Full TikTok connection with Dashboard, Insights, Content Ideas, and Profile.</p><ul><li>Connect TikTok via OAuth</li><li>Supabase metrics sync</li><li>Insight Engine + ideas</li></ul><a class="btn" href="pricing.html">Connect TikTok</a></article>
+          <article class="price lazy-load"><h3>Team</h3><div class="amount">Custom</div><div class="per">Shared workflows</div><p>For creator-first teams running collaborative growth operations.</p><ul><li>Shared review process</li><li>Operator-friendly workflows</li><li>Expanded support options</li></ul><a class="btn secondary" href="pricing.html">Talk to team</a></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">Early Feedback</div>
+            <h2>Placeholder feedback from real creator workflows.</h2>
+          </div>
+        </div>
+        <div class="proof-grid">
+          <article class="testimonial lazy-load"><div class="testimonial-top"><div class="avatar">TC</div><div><strong>TikTok Creator</strong><div class="rating">Early access</div></div></div><p>The Dashboard and Insight Engine made weekly review simpler. I had a clearer next-post decision.</p></article>
+          <article class="testimonial lazy-load"><div class="testimonial-top"><div class="avatar">OP</div><div><strong>Creator Operator</strong><div class="rating">Pilot team</div></div></div><p>Demo Mode helped onboarding before OAuth connection. The workflow felt practical, not overwhelming.</p></article>
+          <article class="testimonial lazy-load"><div class="testimonial-top"><div class="avatar">GM</div><div><strong>Growth Manager</strong><div class="rating">Internal test</div></div></div><p>Ranked insights with expected impact are useful for prioritizing experiments without hype.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">What You Track</div>
+            <h2>Core metrics visible in one creator-friendly view.</h2>
+          </div>
+        </div>
+        <div class="stats-grid">
+          <article class="metric lazy-load"><strong>Posts count</strong><p>Recent publishing volume</p></article>
+          <article class="metric lazy-load"><strong>Avg views</strong><p>Mean per synced videos</p></article>
+          <article class="metric lazy-load"><strong>Avg engagement</strong><p>Interaction efficiency</p></article>
+          <article class="metric lazy-load"><strong>Consistency score</strong><p>Publishing regularity signal</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow">FAQ</div>
+            <h2>Answers to real creator questions before connecting TikTok.</h2>
+          </div>
+        </div>
+        <div class="faq-list" data-faq>
+          <article class="faq-item lazy-load"><button class="faq-question" type="button" aria-expanded="false"><span>Do I need to be technical to use Creator Analytics?</span><span class="chev">⌄</span></button><div class="faq-answer"><p>No. The app is built for creators and small teams with mixed technical backgrounds.</p></div></article>
+          <article class="faq-item lazy-load"><button class="faq-question" type="button" aria-expanded="false"><span>What happens when I connect TikTok?</span><span class="chev">⌄</span></button><div class="faq-answer"><p>You authenticate through TikTok OAuth, then latest videos and metrics sync to Supabase.</p></div></article>
+          <article class="faq-item lazy-load"><button class="faq-question" type="button" aria-expanded="false"><span>Can I try the app without connecting an account?</span><span class="chev">⌄</span></button><div class="faq-answer"><p>Yes. Use Demo Mode for an instant product preview.</p></div></article>
+          <article class="faq-item lazy-load"><button class="faq-question" type="button" aria-expanded="false"><span>How often are metrics refreshed?</span><span class="chev">⌄</span></button><div class="faq-answer"><p>You can tap Refresh metrics in app; sync cadence follows the current backend refresh cycle.</p></div></article>
+          <article class="faq-item lazy-load"><button class="faq-question" type="button" aria-expanded="false"><span>Where is my data stored?</span><span class="chev">⌄</span></button><div class="faq-answer"><p>Analytics data used by Dashboard, Insights, and Ideas is stored in Supabase.</p></div></article>
+          <article class="faq-item lazy-load"><button class="faq-question" type="button" aria-expanded="false"><span>Is this an official TikTok app?</span><span class="chev">⌄</span></button><div class="faq-answer"><p>Creator Analytics is an independent product that integrates with TikTok OAuth.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="section">
+      <div class="wrap">
+        <div class="cta lazy-load">
+          <div>
+            <div class="eyebrow">Ready to start</div>
+            <h2>Move from TikTok metrics to clear next actions.</h2>
+            <p class="lead">Start with Connect TikTok or jump into Demo Mode to preview the full flow instantly.</p>
+          </div>
+          <div class="field">
+            <a class="btn" href="pricing.html">Connect TikTok</a>
+            <a class="btn secondary" href="pricing.html">Use Demo Mode</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="newsletter" id="newsletter">
+        <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">V</span><span>Creator Analytics</span></a>
+        <p class="helper">Creator Analytics turns TikTok performance into practical next content actions.</p>
+        <form id="newsletterForm" class="newsletter" novalidate>
+          <label class="helper" for="newsletterEmail">Product updates for creator analytics workflows</label>
+          <div class="field">
+            <input id="newsletterEmail" name="email" type="email" autocomplete="email" placeholder="Email address" required />
+            <button class="btn" type="submit">Subscribe</button>
+          </div>
+          <p class="helper" id="newsletterMessage" aria-live="polite"></p>
+        </form>
+      </div>
+      <div>
+        <h3>Links</h3>
+        <p><a href="features.html">Features</a></p>
+        <p><a href="pricing.html">Pricing</a></p>
+        <p><a href="blog.html">Blog</a></p>
+        <p><a href="terms.html">Terms</a></p>
+      </div>
+      <div>
+        <h3>Social</h3>
+        <div class="social" aria-label="Social media links">
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="X">x</a>
+          <a href="#" aria-label="GitHub">⌘</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const root=document.documentElement;
+      const themeToggle=document.getElementById('themeToggle');
+      const menuToggle=document.getElementById('menuToggle');
+      const mobileMenu=document.getElementById('mobileMenu');
+      const savedTheme=localStorage.getItem('creator-analytics-theme');
+      if(savedTheme){root.setAttribute('data-theme',savedTheme);themeToggle.textContent=savedTheme==='light'?'☼':'☾';}
+      themeToggle?.addEventListener('click',()=>{
+        const next=root.getAttribute('data-theme')==='light'?'dark':'light';
+        root.setAttribute('data-theme',next);
+        localStorage.setItem('creator-analytics-theme',next);
+        themeToggle.textContent=next==='light'?'☼':'☾';
+      });
+      menuToggle?.addEventListener('click',()=>{
+        const open=mobileMenu.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded',String(open));
+      });
+      document.querySelectorAll('a[href^="#"]').forEach(link=>{
+        link.addEventListener('click',event=>{
+          const target=document.querySelector(link.getAttribute('href'));
+          if(!target) return;
+          event.preventDefault();
+          target.scrollIntoView({behavior:'smooth',block:'start'});
+          mobileMenu?.classList.remove('open');
+          menuToggle?.setAttribute('aria-expanded','false');
+        });
+      });
+      document.querySelectorAll('[data-faq] .faq-question').forEach(button=>{
+        button.addEventListener('click',()=>{
+          const item=button.closest('.faq-item');
+          const isOpen=item.classList.toggle('open');
+          button.setAttribute('aria-expanded',String(isOpen));
+        });
+      });
+      const newsletter=document.getElementById('newsletterForm');
+      const email=document.getElementById('newsletterEmail');
+      const message=document.getElementById('newsletterMessage');
+      newsletter?.addEventListener('submit',event=>{
+        event.preventDefault();
+        const value=email.value.trim();
+        const valid=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+        message.textContent=valid?'Thanks. You are subscribed to Creator Analytics updates.':'Please enter a valid email address.';
+        message.style.color=valid?'var(--ok)':'var(--accent)';
+        if(valid) newsletter.reset();
+      });
+      const observer=new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{ if(entry.isIntersecting){ entry.target.classList.add('is-visible'); observer.unobserve(entry.target); } });
+      },{threshold:.12});
+      document.querySelectorAll('.lazy-load').forEach(el=>observer.observe(el));
+    })();
+  </script>
+</body>
+</html>

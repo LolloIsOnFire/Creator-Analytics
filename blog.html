@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Creator Analytics resources for TikTok creators: workflows, Insight Engine usage, Supabase sync, and content planning tactics." />
+  <meta name="theme-color" content="#0F1419" />
+  <meta property="og:title" content="Creator Analytics Blog" />
+    <meta property="og:description" content="Search practical resources on TikTok OAuth, Supabase sync, Dashboard metrics, and content ideas." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://creatoranalytics.example/blog.html" />
+  <title>Creator Analytics | Blog</title>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Creator Analytics Blog","url":"https://creatoranalytics.example/blog.html"}</script>
+  <style>
+    :root{--bg:#0F1419;--bg2:#141B22;--panel:#171F28;--panel2:#1E2834;--text:#E8E8E8;--muted:#AAB4C0;--line:rgba(255,255,255,.08);--primary:#667eea;--primary2:#764ba2;--accent:#FF6B6B;--ok:#4ade80;--shadow:0 18px 50px rgba(0,0,0,.28);--r-sm:8px;--r-lg:16px;--max:1180px;--trans:220ms ease;}
+    [data-theme="light"]{--bg:#F5F7FB;--bg2:#FFFFFF;--panel:#FFFFFF;--panel2:#F0F4FA;--text:#101828;--muted:#475467;--line:rgba(16,24,40,.1);--shadow:0 18px 50px rgba(16,24,40,.08);}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:radial-gradient(circle at top left,rgba(102,126,234,.12),transparent 30%),radial-gradient(circle at top right,rgba(255,107,107,.08),transparent 22%),var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility} img,svg{max-width:100%;display:block} a{color:inherit;text-decoration:none} button,input,textarea{font:inherit} :focus-visible{outline:3px solid rgba(102,126,234,.65);outline-offset:3px} .skip{position:absolute;left:-999px;top:0;background:var(--panel);padding:12px 16px;border-radius:999px;z-index:1000}.skip:focus{left:16px;top:16px}
+    .wrap{width:min(100% - 32px,var(--max));margin:0 auto} .section{padding:72px 0} .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}.eyebrow::before{content:"";width:24px;height:1px;background:linear-gradient(90deg,var(--accent),transparent)} h1,h2,h3,h4,p{margin:0} h1{font-size:clamp(2.5rem,7vw,4.4rem);line-height:1.03;letter-spacing:-.04em} h2{font-size:clamp(1.7rem,3vw,2.6rem);line-height:1.08;letter-spacing:-.03em} h3{font-size:1.12rem;line-height:1.2} p.lead{font-size:clamp(1.05rem,2vw,1.18rem);color:var(--muted);max-width:66ch}
+    .panel,.article,.sidebar,.cta{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01)),var(--panel);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--shadow)} .panel,.article,.sidebar{padding:22px}
+    .btn{position:relative;overflow:hidden;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:14px 22px;border-radius:999px;border:1px solid transparent;background:linear-gradient(135deg,var(--primary),var(--primary2));color:#fff;font-weight:700;transition:transform var(--trans),filter var(--trans),box-shadow var(--trans)} .btn:hover{transform:translateY(-1px);filter:brightness(1.04);box-shadow:0 12px 24px rgba(102,126,234,.28)} .btn.secondary{background:transparent;border-color:var(--line);color:var(--text)} .btn.ghost{background:transparent;border-color:transparent;color:var(--text)}
+    .topbar{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)} .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0} .brand{display:inline-flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.03em}.brand-mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--primary),var(--primary2));display:grid;place-items:center;color:#fff;box-shadow:0 8px 24px rgba(102,126,234,.24)} .menu{display:none;gap:8px;align-items:center}.menu a{padding:10px 12px;color:var(--muted);border-radius:999px}.menu a:hover,.menu a[aria-current="page"]{background:rgba(255,255,255,.05);color:var(--text)} .nav-actions{display:flex;align-items:center;gap:10px} .icon-btn{min-height:48px;min-width:48px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--text);display:grid;place-items:center;cursor:pointer;transition:transform var(--trans),background var(--trans)} .icon-btn:hover{transform:translateY(-1px);background:var(--panel2)} .burger{display:grid;gap:4px} .burger span{width:18px;height:2px;background:currentColor;border-radius:99px}
+    .mobile-panel{display:none;padding:0 0 18px} .mobile-panel.open{display:block} .mobile-links{display:grid;gap:8px;padding:12px 0 0} .mobile-links a{padding:14px 16px;border:1px solid var(--line);border-radius:var(--r-sm);background:var(--panel)}
+    .hero{padding:56px 0 24px} .hero-grid{display:grid;gap:28px;align-items:center}
+    .blog-layout{display:grid;gap:24px} .article-grid{display:grid;gap:18px;grid-template-columns:1fr} .article{display:grid;gap:14px;transition:transform var(--trans)} .article:hover{transform:translateY(-2px)} .thumb{height:180px;border-radius:18px;background:linear-gradient(135deg,rgba(102,126,234,.28),rgba(255,107,107,.16)),radial-gradient(circle at 30% 30%,rgba(255,255,255,.22),transparent 26%),var(--panel2);position:relative;overflow:hidden} .thumb::after{content:"";position:absolute;inset:auto 18px 18px auto;width:96px;height:96px;border-radius:24px;background:rgba(255,255,255,.08);transform:rotate(14deg)} .meta{display:flex;flex-wrap:wrap;gap:10px;color:var(--muted);font-size:.92rem} .article p{color:var(--muted)} .article .link{font-weight:700;color:#c7d3ff}
+    .sidebar{display:grid;gap:22px} .search{display:grid;gap:10px} .tag-list{display:flex;flex-wrap:wrap;gap:10px} .tag{padding:9px 12px;border-radius:999px;background:rgba(255,255,255,.04);border:1px solid var(--line);cursor:pointer;color:var(--text)} .tag.active{background:linear-gradient(135deg,var(--primary),var(--primary2));border-color:transparent} .popular{display:grid;gap:14px} .popular a{padding:12px 0;border-bottom:1px solid var(--line);color:var(--muted)} .popular a:last-child{border-bottom:0}
+    .cta{padding:28px;display:grid;gap:18px;align-items:center;background:linear-gradient(135deg,rgba(102,126,234,.22),rgba(118,75,162,.18)),var(--panel)} .footer{padding:36px 0 48px;border-top:1px solid var(--line);margin-top:60px} .footer-grid{display:grid;gap:24px} .social{display:flex;gap:10px;flex-wrap:wrap} .social a{width:44px;height:44px;border-radius:999px;border:1px solid var(--line);display:grid;place-items:center;background:var(--panel)} .newsletter{display:grid;gap:10px} .field{display:flex;gap:10px;flex-wrap:wrap} input[type="email"],input[type="search"],input[type="text"],select,textarea{width:100%;min-height:48px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:var(--bg2);color:var(--text)} .helper{font-size:.92rem;color:var(--muted)} .hidden{display:none !important} .lazy-load{opacity:.001;transform:translateY(12px);transition:opacity .55s ease,transform .55s ease} .lazy-load.is-visible{opacity:1;transform:translateY(0)}
+    @media (min-width:768px){.menu{display:flex}.burger-wrap{display:none}.hero{padding:74px 0 40px}.blog-layout{grid-template-columns:1.6fr .8fr}.article-grid{grid-template-columns:repeat(2,1fr)} .cta{grid-template-columns:1.15fr .85fr} .footer-grid{grid-template-columns:1.2fr .8fr .8fr}}
+    @media (min-width:1024px){.section{padding:92px 0}.blog-layout{grid-template-columns:1.9fr .75fr}.article-grid{grid-template-columns:repeat(3,1fr)} .cta{padding:36px}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="nav" role="navigation" aria-label="Primary navigation">
+        <a class="brand" href="index.html"><span class="brand-mark">V</span><span>Creator Analytics</span></a>
+        <nav class="menu" aria-label="Main menu"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="blog.html" aria-current="page">Blog</a><a href="terms.html">Docs</a></nav>
+        <div class="nav-actions"><button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle dark mode">☾</button><a class="btn secondary" href="pricing.html">Connect TikTok</a><div class="burger-wrap"><button class="icon-btn burger" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button></div></div>
+      </div>
+      <div class="mobile-panel" id="mobileMenu"><div class="mobile-links"><a href="features.html">Features</a><a href="pricing.html">Pricing</a><a href="blog.html">Blog</a><a href="terms.html">Docs</a><a href="pricing.html">Connect TikTok</a></div></div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy lazy-load">
+          <span class="eyebrow">Blog & resources</span>
+          <h1>Resources for creator operators.</h1>
+          <p class="lead">Practical guides to interpret TikTok performance and choose better next actions with Creator Analytics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="section">
+      <div class="wrap blog-layout">
+        <div class="grid">
+          <div class="panel lazy-load">
+            <label class="helper" for="blogSearch">Search resources</label>
+            <input id="blogSearch" type="search" placeholder="Search by metric, workflow, or topic" aria-label="Search blog posts" />
+          </div>
+          <div class="article-grid" id="articleGrid">
+            <article class="article lazy-load" data-category="Dashboard" data-search="dashboard consistency score avg views avg engagement refresh metrics">
+              <div class="thumb" aria-hidden="true"></div><div class="meta"><span>Dashboard</span><span>Mar 28, 2026</span><span>Product Team</span></div><h3>How to read consistency score before planning next week</h3><p>A practical way to combine posts count, avg views, and avg engagement into one decision.</p><a class="link" href="#">Read more →</a>
+            </article>
+            <article class="article lazy-load" data-category="Insights" data-search="insight engine score recommendation expected impact">
+              <div class="thumb" aria-hidden="true"></div><div class="meta"><span>Insights</span><span>Mar 18, 2026</span><span>Product Team</span></div><h3>Using Insight Engine scores to prioritize content actions</h3><p>Decide what to test first using ranked recommendations and expected impact.</p><a class="link" href="#">Read more →</a>
+            </article>
+            <article class="article lazy-load" data-category="Content Ideas" data-search="content ideas strongest signals recommendation workflow">
+              <div class="thumb" aria-hidden="true"></div><div class="meta"><span>Content Ideas</span><span>Mar 10, 2026</span><span>Creator Ops</span></div><h3>From top signals to practical post ideas</h3><p>Translate high-score insights into ideas you can actually film and publish.</p><a class="link" href="#">Read more →</a>
+            </article>
+            <article class="article lazy-load" data-category="TikTok OAuth" data-search="tiktok oauth connect tiktok mobile onboarding callback deep link">
+              <div class="thumb" aria-hidden="true"></div><div class="meta"><span>TikTok OAuth</span><span>Feb 28, 2026</span><span>Mobile Team</span></div><h3>TikTok OAuth flow explained for non-technical creators</h3><p>What happens during Connect TikTok, callback, and deep-link return to app.</p><a class="link" href="#">Read more →</a>
+            </article>
+            <article class="article lazy-load" data-category="Supabase" data-search="supabase sync storage edge functions metrics refresh">
+              <div class="thumb" aria-hidden="true"></div><div class="meta"><span>Supabase</span><span>Feb 21, 2026</span><span>Backend Team</span></div><h3>How Supabase powers sync for Dashboard and Insights</h3><p>A readable overview of data flow that supports analytics features.</p><a class="link" href="#">Read more →</a>
+            </article>
+            <article class="article lazy-load" data-category="Demo Mode" data-search="demo mode preview no account connected">
+              <div class="thumb" aria-hidden="true"></div><div class="meta"><span>Demo Mode</span><span>Feb 12, 2026</span><span>Product Team</span></div><h3>Demo Mode vs connected mode: when to use each</h3><p>Choose the right starting path for onboarding or daily production use.</p><a class="link" href="#">Read more →</a>
+            </article>
+          </div>
+        </div>
+
+        <aside class="sidebar lazy-load">
+          <div>
+            <div class="eyebrow">Categories</div>
+            <div class="tag-list" id="categoryTags">
+              <button class="tag active" type="button" data-filter="All">All</button>
+              <button class="tag" type="button" data-filter="Dashboard">Dashboard</button>
+              <button class="tag" type="button" data-filter="Insights">Insights</button>
+              <button class="tag" type="button" data-filter="Content Ideas">Content Ideas</button>
+              <button class="tag" type="button" data-filter="TikTok OAuth">TikTok OAuth</button>
+              <button class="tag" type="button" data-filter="Supabase">Supabase</button>
+              <button class="tag" type="button" data-filter="Demo Mode">Demo Mode</button>
+            </div>
+          </div>
+          <div>
+            <div class="eyebrow">Popular posts</div>
+            <div class="popular" id="popularPosts">
+              <a href="#" data-search-link="consistency score">How to read consistency score before planning next week</a>
+              <a href="#" data-search-link="insight engine">Using Insight Engine scores to prioritize content actions</a>
+              <a href="#" data-search-link="demo mode">Demo Mode vs connected mode: when to use each</a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="wrap">
+        <div class="cta lazy-load">
+          <div><div class="eyebrow">More resources</div><h2>Use resources, then move into action.</h2><p class="lead">Explore features and connect TikTok when you are ready for full analytics workflows.</p></div>
+          <div class="field"><a class="btn" href="features.html">Explore features</a><a class="btn secondary" href="pricing.html">Connect TikTok</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="newsletter" id="newsletter">
+        <a class="brand" href="index.html"><span class="brand-mark">V</span><span>Creator Analytics</span></a>
+        <p class="helper">From TikTok posts to clear next actions.</p>
+        <form id="newsletterForm" class="newsletter" novalidate>
+          <label class="helper" for="newsletterEmail">Product updates for creator analytics workflows</label>
+          <div class="field"><input id="newsletterEmail" name="email" type="email" autocomplete="email" placeholder="Email address" required /><button class="btn" type="submit">Subscribe</button></div>
+          <p class="helper" id="newsletterMessage" aria-live="polite"></p>
+        </form>
+      </div>
+      <div><h3>Links</h3><p><a href="features.html">Features</a></p><p><a href="pricing.html">Pricing</a></p><p><a href="blog.html">Blog</a></p><p><a href="terms.html">Terms</a></p></div>
+      <div><h3>Social</h3><div class="social"><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="X">x</a><a href="#" aria-label="GitHub">⌘</a></div></div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      const root=document.documentElement; const themeToggle=document.getElementById('themeToggle'); const menuToggle=document.getElementById('menuToggle'); const mobileMenu=document.getElementById('mobileMenu');
+      const savedTheme=localStorage.getItem('creator-analytics-theme'); if(savedTheme){root.setAttribute('data-theme',savedTheme);themeToggle.textContent=savedTheme==='light'?'☼':'☾';}
+      themeToggle?.addEventListener('click',()=>{const next=root.getAttribute('data-theme')==='light'?'dark':'light';root.setAttribute('data-theme',next);localStorage.setItem('creator-analytics-theme',next);themeToggle.textContent=next==='light'?'☼':'☾';});
+      menuToggle?.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));});
+      document.querySelectorAll('a[href^="#"]').forEach(link=>{link.addEventListener('click',event=>{const target=document.querySelector(link.getAttribute('href'));if(!target) return;event.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'});mobileMenu?.classList.remove('open');menuToggle?.setAttribute('aria-expanded','false');});});
+      const newsletter=document.getElementById('newsletterForm'); const email=document.getElementById('newsletterEmail'); const message=document.getElementById('newsletterMessage'); newsletter?.addEventListener('submit',event=>{event.preventDefault();const value=email.value.trim();const valid=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);message.textContent=valid?'Thanks. You are subscribed to Creator Analytics updates.':'Please enter a valid email address.';message.style.color=valid?'var(--ok)':'var(--accent)';if(valid) newsletter.reset();});
+      const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}});},{threshold:.12}); document.querySelectorAll('.lazy-load').forEach(el=>observer.observe(el));
+      const search=document.getElementById('blogSearch'); const articles=[...document.querySelectorAll('#articleGrid .article')]; const tags=[...document.querySelectorAll('#categoryTags .tag')]; let activeCategory='All'; const applyFilters=()=>{const query=search.value.trim().toLowerCase(); articles.forEach(article=>{const category=article.dataset.category; const searchText=article.dataset.search; const matchesCategory=activeCategory==='All'||category===activeCategory; const matchesQuery=!query||searchText.includes(query)||article.textContent.toLowerCase().includes(query); article.classList.toggle('hidden',!(matchesCategory&&matchesQuery));});}; search?.addEventListener('input',applyFilters); tags.forEach(tag=>tag.addEventListener('click',()=>{tags.forEach(btn=>btn.classList.remove('active'));tag.classList.add('active');activeCategory=tag.dataset.filter;applyFilters();})); document.querySelectorAll('[data-search-link]').forEach(link=>link.addEventListener('click',event=>{event.preventDefault();search.value=link.dataset.searchLink;search.dispatchEvent(new Event('input'));search.focus();}));
+    })();
+  </script>
+</body>
+</html>
